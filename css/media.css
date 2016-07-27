@@ -192,10 +192,6 @@
     margin-bottom: 10px !important;
   }
 
-  .main-benefit-offers h1 {
-    font-size: 24px;
-  }
-
   .main-benefit-offers .main-benefit-offers-inner .main-benefit-offers-item {
     width: 227px;
     height: 165px;
@@ -318,9 +314,6 @@
     margin-left: 1px;
   }
 
-  .main-about h1 {
-    font-size: 24px;
-  }
   .main-about a {
     font-size: 13px;
     margin-top: 30px;
@@ -1586,7 +1579,6 @@
   }
 
   .main-news h1 {
-    font-size: 16px;
     width: 180px;
     text-align: center;
     margin: auto;
@@ -2212,6 +2204,10 @@
     height: 225px;
     border: 1px solid #d1dce1;
     text-align: center;
+  }
+  .card-good .card-header .photo .img-main img {
+    width: 100%;
+    height: 100%;
   }
   .card-good .card-header .photo .img-small {
     margin-top: 10px;

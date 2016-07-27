@@ -27,7 +27,7 @@
 
 <body>
 <!-- Header -->
-<div class="container">
+<div class="container header-wrap">
     <nav class="navbar navbar-default header">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -36,7 +36,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="#"></a>
         </div>
         
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -44,13 +44,13 @@
           <div class="nav navbar-nav navbar-right account">
             <div class="my-orders"><img src="img/alert-comment.png"><span>&nbsp;&nbsp;&nbsp;</span><img src="img/alert-notification.png">&nbsp;<a href="#">Заказы</a></div>
             <div class="my-account"><a href="#"> Михаил &nbsp;<img src="img/arrow-down.png"></a></div>
-          </div> 
+          </div>  
 
-           <form class="hidden-lg hidden-md" action="#menu">
-             <button type="button" class="close-menu">&times;</button>
-           </form>       
+          <form class="hidden-lg hidden-md" action="#menu">
+            <button type="button" class="close-menu">&times;</button>
+          </form>     
 
-          <ul class="nav navbar-nav menu">       
+          <ul class="nav navbar-nav menu">          
             <li><a href="stock.html">запчасти б/у</a></li>
             <li><a href="new.html">новые запчасти</a></li>
             <li><a href="request-details.html">запрос запчастей</a></li>
@@ -63,26 +63,30 @@
 
           <div class="row nav-first-row">
             <div class="delivery">
-                 <a class="city" data-toggle="modal" data-target="#selectCity" href="#"><img src="img/map.png">&nbsp;г. Петропаловск-Камчатский</a> 
-                 <a class="street" href="#" a href="#" data-toggle="popover" data-html="true" data-placement="bottom" data-content="Пункты выдачи товара:<br><br>г. Тюмень, ул. Ленина 34.,склад №227<br><br>г. Тюмень, ул. Ленина 34.,склад №31"> ул. Сакко и Ванцети  135, оф. 205 &nbsp; <img src="img/arrow-down.png"></a>
+                 <a class="underline-not city" data-toggle="modal" data-target="#selectCity" href="#"><img src="img/map.png" alt="#">&nbsp;г. Петропаловск-Камчатский</a> 
+                 <a class="dropped street" href="#" data-toggle="popover" data-html="true" data-placement="bottom" data-content="Пункты выдачи товара:<br><br>г. Тюмень, ул. Ленина 34.,склад №227<br><br>г. Тюмень, ул. Ленина 34.,склад №31"> ул. Сакко и Ванцети  135, оф. 205 &nbsp; <img src="img/arrow-down.png" alt="#"></a>
             </div>
 
             <div class="phone-one">
-                 <p><img src="img/phone.png">&nbsp;+7(3812) 921-001</p>
+                 <p><img src="img/phone.png" alt="#">&nbsp;+7(3812) 921-001</p>
             </div>
 
             <div class="phone-two">
-                 <p><img src="img/phone.png">&nbsp;+7(965) 989-88-99</p>
+                 <p><img src="img/phone.png" alt="#">&nbsp;+7(965) 989-88-99</p>
             </div>
 
             <div class="recall-me">
-                 <img class="hidden-xs hidden-sm" src="img/viber.png"><a data-toggle="modal" href="#recall">&nbsp;перезвоните мне</a>
+                 <img class="hidden-xs hidden-sm" src="img/viber.png" alt="#"><a class="dropped" data-toggle="modal" href="#recall">&nbsp;перезвоните мне</a>
             </div>  
           </div>
 
           <div class="row nav-second-row">
-              <div class="adress">
-                 
+              <div class="address hidden-sm hidden-xs">
+                 <img src="img/address-status-bar.png" alt="#">
+                 <div class="address-txt">
+                     <p class="address-place">Омск, ул.Пранова, 7</p>
+                     <p class="address-time">Сегодня с 9 00 до 21 00</p>
+                 </div>
               </div>
 
               <div class="search hidden-xs">
@@ -90,12 +94,12 @@
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Например: Бампер передний Mazda 3">
                     </div>
-                    <a href="#"><img src="img/search-button.png"></a>
+                    <a href="search-result.html"><img src="img/search-button.png" alt="#"></a>
                   </form> 
               </div>
 
               <div class="basket hidden-xs">
-                  <a href="#"><img src="img/cart.png"></a>
+                  <a href="form-order.html"><img src="img/cart.png" alt="#"></a>
                   <div class="basket-inner">
                       <p>Корзина</p>
                       <p><span class="basket-status">пусто</span></p>
@@ -107,17 +111,27 @@
           <div class="container laptop-menu-right-wrap visible-xs visible-sm">
             <div class="row laptop-menu-right">
                 <div class="col-sm-3 phone-laptop">
-                    <a href="#"><img src="img/phone-laptop.png"></a>
+                    <a href="#"><img src="img/phone-laptop.png" alt="#"></a>
                 </div>
-                <div class="col-sm-3 search-laptop">
-                    <a href="#" data-toggle="modal" data-target="#search"><img src="img/search-laptop.png"></a>
+                <div class="col-sm-3 search-laptop btn-group">
+                    <button type="button" data-toggle="dropdown" class="dropdown-toggle search-laptop-btn" ><img src="img/search-laptop.png" alt="#"></button>
+                    <ul class="dropdown-menu search-mobile hidden-md hidden-lg">
+                      <li>
+                        <form class="navbar-form search-mobile-form" role="search">
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Например: Бампер передний Mazda 3">
+                          </div>
+                          <a href="search-result.html"><img src="img/search-button.png" alt="#"></a>
+                        </form> 
+                      </li>
+                    </ul>
                 </div>
                 <div class="col-sm-3 basket-laptop">
-                    <a href="form-order.html"><img src="img/cart-laptop.png"></a>
+                    <a href="form-order.html"><img src="img/cart-laptop.png" alt="#"></a>
                     <p><span class="basket-status">0</span></p>
                 </div>
                 <div class="col-sm-3 log-in-laptop">
-                    <a href="#"><img src="img/log-in-laptop.png"></a>
+                    <a href="#"><img src="img/log-in-laptop.png" alt="#"></a>
                 </div>               
             </div>  
         </div>           
@@ -276,7 +290,7 @@
              <a href="#">Напомнить пароль</a> 
           </div> 
           <div class="">
-             <input type="password" placeholder="&nbsp;Пароль">     
+             <input type="password" placeholder="Пароль">     
           </div> 
           <div class="remember-me">
              <input id="check1" type="checkbox" name="check" value="check1">
@@ -324,9 +338,7 @@
               <input for="email" type="text" placeholder="***@email.ru">  
           </div>
           <div class="form-group">
-               <label for="country">*Страна</label>
-          </div>
-          <div class="form-group">
+          <label for="country">*Страна</label>
               <select id="country">
               <option>
                   <div class="main-request-demont-item-option">
@@ -380,7 +392,7 @@
                 <p>Вы уже зарегистрированы?</p>
             </div>
             <div >
-                <a href="#signIn">Войдите</a>
+                <a class="underline-not" href="#signIn">Войдите</a>
             </div>            
         </div>      
         </div>

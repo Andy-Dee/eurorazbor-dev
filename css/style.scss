@@ -51,7 +51,12 @@ a.underline-not:hover {
 }
 
 a.dropped {
+	text-decoration: none !important;
 	border-bottom: 1px dashed gainsboro !important;
+	font-family: $font-ubuntu;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 48px;
 	color: black;
 }
 
@@ -99,7 +104,7 @@ button.button-blue:hover {
 }
 
 button.button-blue:focus {
-		bacbackground-color: white !important;
+		background-color: white !important;
 		background-image: linear-gradient(to top, rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%) !important;
 }
 
@@ -120,7 +125,7 @@ button.button-grey:hover {
 }
 
 button.button-grey:focus {
-		bacbackground-color: white !important;
+		background-color: white !important;
 		background-image: linear-gradient(to top, rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%) !important;
 }
 
@@ -219,7 +224,6 @@ form {
 		  /* for FF */
 		  -moz-appearance: none;
 		  text-indent: 0.01px; 
-		  text-overflow: '';
 		  /* for IE */
 		  -ms-appearance: none;
 		  appearance: none!important;
@@ -243,8 +247,7 @@ select {
 	  line-height: 1em;
 	  /* for FF */
 	  -moz-appearance: none;
-	  text-indent: 0.01px; 
-	  text-overflow: '';
+	  text-indent: 0.01px;
 	  /* for IE */
 	  -ms-appearance: none;
 	  appearance: none!important;			  
@@ -270,8 +273,7 @@ input[type="text"] {
 	  line-height: 1em;
 	  /* for FF */
 	  -moz-appearance: none;
-	  text-indent: 0.01px; 
-	  text-overflow: '';
+	  text-indent: 0.01px;
 	  /* for IE */
 	  -ms-appearance: none;
 	  appearance: none!important;			  
@@ -330,6 +332,23 @@ input[type="text"].wrong-input {
 :-ms-input-placeholder.wrong-input { 
    	color: #ef5350;
 }
+
+input[type="password"] {
+	  padding-left: 10px;
+	  padding-bottom: 0;
+	  margin-bottom: 2%;
+	  -webkit-appearance: none;
+	  line-height: 1em;
+	  /* for FF */
+	  -moz-appearance: none;
+	  text-indent: 0.01px;
+	  /* for IE */
+	  -ms-appearance: none;
+	  appearance: none!important;			  
+	  white-space: pre-wrap;
+	  border: 2px solid gainsboro;
+	 }
+
 
 /* Labels */
 .label-new {
@@ -580,35 +599,10 @@ input[type="text"].wrong-input {
 				.sign-in {
 					position: absolute;
 				}
-
-				.sign-in {
-					a {
-						font-family: $font-ubuntu;
-						font-size: 13px;
-						font-weight: 400;
-						line-height: 48px;
-						color: black;
-						text-decoration: none;
-						border-bottom: 1px dashed gainsboro;
-					}
-				}
-
 				.sign-up {
 					position: absolute;
 					margin-left: 50px;
-					}
-
-				.sign-up {
-					a {
-						font-family: $font-ubuntu;
-						font-size: 13px;
-						font-weight: 400;
-						line-height: 48px;
-						color: black;
-						text-decoration: none;
-						border-bottom: 1px dashed gainsboro;
-					}
-				}
+				}				
 			}
 			form {
 				button.close-menu {
@@ -623,7 +617,6 @@ input[type="text"].wrong-input {
 		}
 	}
 }
-
 
 button.navbar-toggle {
 	float: left;
@@ -645,7 +638,7 @@ button.navbar-toggle {
 .nav-first-row {
 	.delivery {
 		width: 447px;
-		margin-top: 18px;
+		margin-top: 5px;
 		position: absolute;
 	}
 
@@ -659,29 +652,18 @@ button.navbar-toggle {
 		}
 		.street {
 			width: 142px !important;
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 400;
-			color: black;
-			text-decoration: none;
-			border-bottom: 1px dashed gainsboro;
 			white-space: nowrap;
 		}
 	}
-	.phone-one {
+	.phone-one, .phone-two {
 		width: 145px;
 		margin-top: 5px;
 		margin-left: 458px;
 		position: absolute;
 	}
 
-	.phone-one {
+	.phone-one, .phone-two {
 		p {
-			// Text style for "+7(3812) 921-0"
-			
-			height: 16px;
-			color: black;
-			font-family: $font-ubuntu;
 			font-size: 16px;
 			font-weight: 500;
 			line-height: 48px;
@@ -689,24 +671,8 @@ button.navbar-toggle {
 	}
 
 	.phone-two {
-		width: 145px;
-		margin-top: 5px;
 		margin-left: 620px;
-		position: absolute;
-	}
-
-	.phone-two {
-		p {
-			// Text style for "+7(965) 989-88"
-			
-			height: 16px;
-			color: black;
-			font-family: $font-ubuntu;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 48px;
-		}
-	}
+	}	
 
 	.recall-me {
 		width: 140px;
@@ -717,13 +683,6 @@ button.navbar-toggle {
 
 	.recall-me {
 		a {
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 400;
-			line-height: 48px;
-			color: black;
-			text-decoration: none;
-			border-bottom: 1px dashed gainsboro;
 			white-space: nowrap;
 		}
 		img {
@@ -740,7 +699,7 @@ button.navbar-toggle {
 
 .nav-second-row {
 	.address {
-		margin-left: 255px;
+		margin-left: 245px;
 		margin-top: 54px;
 		width: 180px;
 		position: absolute;
@@ -800,8 +759,6 @@ button.navbar-toggle {
 			p {
 				width: 59px;
 				height: 14px;
-				color: black;
-				font-family: $font-ubuntu;
 				font-size: 15px;
 				font-weight: 400;
 				margin-top: 2px;
@@ -813,9 +770,6 @@ button.navbar-toggle {
 					width: 33px;
 					height: 9px;
 					color: #a1a1a1;
-					font-family: $font-ubuntu;
-					font-size: 13px;
-					font-weight: 400;
 				}
 			}
 		}
@@ -941,9 +895,6 @@ button.navbar-toggle {
 		p {
 			float: right;			
 			color: #8b8b8b;
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 400;
 			margin-top: 5px;
 			margin-left: 2px;	
 		}
@@ -974,12 +925,10 @@ button.navbar-toggle {
 				.carousel-text {
 					p {
 						text-align: left;
-						font-family: $font-ubuntu;
 						font-size: 34px;
 						font-weight: 500;
 						line-height: 48px;
 						text-transform: uppercase !important;
-						color: black;
 					}
 					a {
 						color: #d32f2f;
@@ -1038,48 +987,34 @@ button.navbar-toggle {
 	height: 160px;
 	border-style: solid;
 	border-width: 20px;
-	-moz-border-image: url('../img/action-border.png') 27 stretch;
-	-webkit-border-image: url('../img/action-border.png') 27 stretch;
-	-o-border-image: url('../img/action-border.png') 27 stretch;
-	border-image: url('../img/action-border.png') 27 fill stretch;
+	-moz-border-image: url('../img/action-border.png') 27 repeat;
+	-webkit-border-image: url('../img/action-border.png') 27 repeat;
+	-o-border-image: url('../img/action-border.png') 27 repeat;
+	border-image: url('../img/action-border.png') 27 fill repeat;
 	padding-top: 10px;
-	
 }
 
 .main-action {
 	.action-content {
 		.action-date {
-			// Text style for "26 апреля 2016"
 			width: 105px;
 			height: 13px;
 			color: #8c8c8c;
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
-			line-height: 22px;
 			white-space: nowrap;
 		}
 		a {
-			// Text style for "Теперь доставк"
 			width: 466px;
 			height: 22px;
 			color: #1565c0;
-			font-family: $font-ubuntu;
 			font-size: 24px;
 			font-weight: 500;
 			line-height: 36px;
-			text-decoration: underline;
 		}
 		.action-text {
-			// Text style for "Уважаемые клие"
-			width: 689px;
-			height: 39px;
-			color: black;
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
-			line-height: 24px;
+			max-height: 40px;
 			width: 700px;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	}
 }
@@ -1111,7 +1046,6 @@ button.navbar-toggle {
 		font-size: 18px;
 		font-weight: 400;
 		list-style-type: none;
-		
 	}
 
 	.car-brands a:hover {
@@ -1156,9 +1090,7 @@ button.navbar-toggle {
 				margin-bottom: 15px;
 			}
 			p {
-				// Text style for "Рулевые рейки"
 				color: #0b0b0b;
-				font-family: $font-ubuntu;
 				font-size: 18px;
 				font-weight: 500;
 				line-height: 18px;
@@ -1216,10 +1148,7 @@ button.navbar-toggle {
 		.main-request-demont-item {
 			header {
 				height: 90px;
-				color: black;
-				font-family: $font-ubuntu;
 				font-size: 18px;
-				font-weight: 400;
 				line-height: 26px;
 			}
 			section {
@@ -1238,64 +1167,17 @@ button.navbar-toggle {
 				width: 100%;
 			}
 
-			form {
-				label {
-				  	color: #616161;
-					font-family: $font-ubuntu;
-					font-size: 13px;
-					font-weight: 300;
-					line-height: 22px;
-					position: absolute;
-					margin-top: 5px;
-					margin-left: 10px;
-				}
+			form {				
 				select {
-				  width: 95%;
-				  height: 55px;
 				  padding-left: 10px;
 				  padding-bottom: 0;
 				  padding-top: 20px;
-				  margin-bottom: 3px;			  
-
-				  -webkit-appearance: none;
-				  background-image: url('../img/request-arrow.png');
-				  background-position: right center;
-				  background-repeat: no-repeat;
-				  line-height: 1em;
-				  /* for FF */
-				  -moz-appearance: none;
-				  text-indent: 0.01px; 
-				  text-overflow: '';
-				  /* for IE */
-				  -ms-appearance: none;
-				  appearance: none!important;			  
-				  white-space: pre-wrap;
-				  border: 2px solid gainsboro;
-				  color: black;
-				  font-family: $font-ubuntu;
-				  font-size: 15px;
-				  font-weight: 400;
-				  line-height: 22px; 
+				  margin-bottom: 3px;
 				  width: 100%;
 				  height: 55px;
 				}
-				 
-				select::-ms-expand {
-				  display: none;
-				}
 			}
 			
-			label {
-				color: #616161;
-				font-family: $font-ubuntu;
-				font-size: 13px;
-				font-weight: 300;
-				line-height: 22px;
-				position: absolute;
-				margin-top: 5px;
-				margin-left: 10px;
-			}
-
 			input[type="text"] {
 				  width: 100%;
 				  height: 55px;
@@ -1303,54 +1185,7 @@ button.navbar-toggle {
 				  padding-bottom: 0;
 				  padding-top: 20px;
 				  margin-bottom: 2%;
-				  -webkit-appearance: none;
-				  background-image: url('../img/request-input-info.png');
-				  background-position: right center;
-				  background-repeat: no-repeat;
-				  line-height: 1em;
-				  /* for FF */
-				  -moz-appearance: none;
-				  text-indent: 0.01px; 
-				  text-overflow: '';
-				  /* for IE */
-				  -ms-appearance: none;
-				  appearance: none!important;
-				  padding-left: 5px;
-				  padding-right: 5px;
-				  white-space: pre-wrap;
-				  border: 2px solid gainsboro;
-				 }
-				::-webkit-input-placeholder {
-				   	color: black;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;
-					line-height: 22px;
-				}
-
-				:-moz-placeholder { /* Firefox 18- */
-				   color: black;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;
-					line-height: 22px;  
-				}
-
-				::-moz-placeholder {  /* Firefox 19+ */
-				   	color: black;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;
-					line-height: 22px; 
-				}
-
-				:-ms-input-placeholder {  
-				   color: black;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;
-					line-height: 22px; 
-				}
+			}
 
 			textarea {
 				width: 350px;
@@ -1377,9 +1212,7 @@ button.navbar-toggle {
 				}
 				p {
 					color: #a1a1a1;
-					font-family: $font-ubuntu;
 					font-size: 13px;
-					font-weight: 400;
 					line-height: 18px;
 					margin-bottom: 1px;
 				}
@@ -1498,10 +1331,7 @@ button.navbar-toggle {
 	.main-news-item {
 		.main-news-item-date {
 			color: #8c8c8c;
-			font-family: $font-ubuntu;
 			font-size: 13px;
-			font-weight: 400;
-			line-height: 22px;
 		}
 
 		h5 {			
@@ -1514,10 +1344,10 @@ button.navbar-toggle {
 		
 		.main-news-item-text {			
 			color: #0a0a0a;
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
 			line-height: 24px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-height: 80px;
 		}
 	}
 }
@@ -1559,9 +1389,6 @@ button.navbar-toggle {
 	.main-about-item {
 		p {	
 			color: #0a0a0a;
-			font-family: $font-roboto;
-			font-size: 15px;
-			font-weight: 400;
 			line-height: 24px;
 		}
 	}
@@ -1619,9 +1446,6 @@ button.navbar-toggle {
 .main-footer-middle {
 	.main-footer-middle-contact {
 		p {
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
 			line-height: 10px;
 			color: black;		
 		}
@@ -1645,9 +1469,7 @@ button.navbar-toggle {
 	.we-accept, .our-partner {
 		p {
 			color: #8c8c8c;
-			font-family: $font-ubuntu;
 			font-size: 13px;
-			font-weight: 400;
 			line-height: 14px;
 		}
 	}
@@ -1676,16 +1498,13 @@ button.navbar-toggle {
 }
 
 .copyright {
-	width: 1170px !important;
 	height: 20px;
 }
 
 .copyright {
 	p {
 		color: #8b8b8b;
-		font-family: $font-ubuntu;
 		font-size: 13px;
-		font-weight: 400;
 		line-height: 20px;
 	}
 	a {
@@ -1723,6 +1542,7 @@ button.navbar-toggle {
 		border-bottom: 0 !important;		
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 5px !important;
 	}
 	.modal-sign-in-header {
 		h4 {
@@ -1739,12 +1559,6 @@ button.navbar-toggle {
 
 	.modal-sign-in-body {
 		label {
-			color: #616161;
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 300;
-			line-height: 22px;
-			position: absolute;
 			margin-top: 5px;
 			margin-left: 30px;
 		}
@@ -1752,115 +1566,21 @@ button.navbar-toggle {
 		input[type="text"] {
 			  width: 90%;
 			  height: 55px;
-			  vertical-align: bottom !important;
-			  padding-bottom: 0;
-			  padding-top: 20px;
-			  padding-left: 10px;
-			  -webkit-appearance: none;
-			  
-			  background-position: right center;
-			  background-repeat: no-repeat;
-			  line-height: 1em;
-			  /* for FF */
-			  -moz-appearance: none;
-			  text-indent: 0.01px; 
-			  text-overflow: '';
-			  /* for IE */
-			  -ms-appearance: none;
-			  appearance: none!important;
 			  margin-left: 5% !important;
 			  margin-right: 5% !important;
-			  white-space: pre-wrap;
-			  border: 2px solid gainsboro;
 			 }
-			::-webkit-input-placeholder {
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;
-
-			}
-
-			:-moz-placeholder { /* Firefox 18- */
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;  
-			}
-
-			::-moz-placeholder {  /* Firefox 19+ */
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
-			:-ms-input-placeholder {  
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
+			
 
 			input[type="password"] {
 			  width: 90%;
 			  height: 55px;
 			  padding-right: 7px;
 			  padding-left: 10px;
-			  -webkit-appearance: none;
-			  background-image: url('../img/password-input.png');
-			  background-position: right center;
-			  background-repeat: no-repeat;
-			  line-height: 1em;
-			  /* for FF */
-			  -moz-appearance: none;
-			  text-indent: 0.01px; 
-			  text-overflow: '';
-			  /* for IE */
-			  -ms-appearance: none;
-			  appearance: none!important;
 			  margin-left: 5% !important;
 			  margin-right: 5% !important;
 			  margin-bottom: 2%;
-			  white-space: pre-wrap;
-			  border: 2px solid gainsboro;
 			 }
-			::-webkit-input-placeholder {
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;
-			}
-
-			:-moz-placeholder { /* Firefox 18- */
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;  
-			}
-
-			::-moz-placeholder {  /* Firefox 19+ */
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
-			:-ms-input-placeholder {  
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
+			
 			.recall-password {
 				float: right !important;				
 				width: 100%;
@@ -1878,34 +1598,13 @@ button.navbar-toggle {
 	}
 	.remember-me {
 		width: 50% !important;
-		padding-top: 5%;
+		padding-top: 20px;
 	}
 
 	.remember-me {
-		input[type="checkbox"] {
-		    display: none;
-		}
-
-		input[type="checkbox"] + label span {
-		    display: inline-block;
-		    width: 18px;
-		    height: 18px;
-		    background: url("../img/checkbox-sprite.png") left top no-repeat;;
-		    margin:-1px 4px 0 0;
-			vertical-align:middle;
-			cursor:pointer;
-			
-		}
-
-		input[type="checkbox"]:checked + label span {
-		    background: url("../img/checkbox-sprite.png") -18px top no-repeat; 
-		}	
-		
 		label {
 			color: #8c8c8c !important;
-			font-family: $font-ubuntu !important;
-			font-size: 15px !important;
-			font-weight: 400 !important;
+			margin: 10px 23px 0;
 		}	
 	}
 		
@@ -1915,15 +1614,7 @@ button.navbar-toggle {
 		margin-right: 20px;
 		width: 150px;
 		height: 45px;
-		background-color: #4caf50;
-		border-radius: 3px;
-		border: none;
-		font-family: $font-ubuntu;
-		font-size: 15px;
-		font-weight: 500;
-		color: white;
-		vertical-align: middle !important;
-		}
+	}
 		
 	.enter {
 		width: 90%;
@@ -1950,6 +1641,129 @@ button.navbar-toggle {
 		a {
 			color: #1565c0;
 			font-family: $font-ubuntu;
+			font-size: 15px;
+			font-weight: 400;
+		}
+	}
+}
+
+.modal-sign-up {
+	max-width: 468px;
+	min-height: 840px;
+	background-color: white;
+	border-radius: 3px !important;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+}	
+
+.modal-sign-up {
+	.modal-sign-up-header {
+		width: 410px;
+		height: 64px;
+		border-bottom: 1px solid #d2dee4;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px !important;
+		padding-left: 5px !important;
+	}
+	.modal-sign-up-header {
+		h4 {
+			color: black;
+			font-family: $font-ubuntu;
+			font-size: 24px;
+			font-weight: 500;
+		}
+	}
+	.modal-sign-up-body {
+		input[type="text"] {
+			  width: 395px !important;
+			  height: 55px;
+			  padding-left: 10px;
+			  padding-bottom: 0;
+			  padding-top: 20px;
+			  margin-left: 0 !important;
+			  margin-right: 40px !important;
+			  margin-bottom: 2%;
+		}		  
+
+		form {
+			margin-left: 5% !important;
+			margin-right: 5% !important;
+			margin-bottom: 2%;
+		}
+
+		form {
+			select {
+			  width: 395px;
+			  height: 55px;
+			  padding-left: 10px;
+			  padding-bottom: 0;
+			  padding-top: 20px;
+			}			
+		}
+		.address-store {
+			margin-left: 0 !important;
+		}
+
+		.address-store {
+			p.can-take {
+				color: black;
+				font-size: 15px;
+			}
+			p.storage {
+				font-weight: 600;
+			}
+			a {
+				color: #1565c0;
+				font-family: $font-ubuntu;
+				font-size: 18px;
+				font-weight: 400;
+				margin-left: 20px;			
+			}
+			.phone {
+				color: #636363;
+				font-size: 15px;
+				font-weight: 400;	
+				margin-left: 20px;	
+				margin-bottom: 0;	
+			}
+		}
+	}
+	
+	p {
+		color: #8c8c8c;
+		font-size: 13px;
+	}
+	button.button-green {
+			float: right;
+			position: absolute;
+			margin-left: 10%;
+			margin-top: 0;
+			width: 150px !important;
+			height: 45px !important;
+		}
+		
+	.enter {
+		width: 90%;
+		height: 50px;
+		float: left;
+		margin-top: 20px;
+		margin-left: 90px;
+	}
+
+	.enter {
+		div {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		p {
+			color: #8c8c8c;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 22px;
+		}
+		a {
+			color: #1565c0;
 			font-size: 15px;
 			font-weight: 400;
 		}
@@ -2005,229 +1819,6 @@ button.navbar-toggle {
 			}
 				
 		}			
-	}
-}
-
-
-.modal-sign-up {
-	max-width: 468px;
-	min-height: 840px;
-	background-color: white;
-	border-radius: 3px !important;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
-}	
-
-.modal-sign-up {
-	.modal-sign-up-header {
-		width: 410px;
-		height: 64px;
-		border-bottom: 1px solid #d2dee4;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 20px !important;
-	}
-	.modal-sign-up-header {
-		h4 {
-			color: black;
-			font-family: $font-ubuntu;
-			font-size: 24px;
-			font-weight: 500;
-		}
-	}
-	.modal-sign-up-body {
-		label {
-			color: #616161;
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 300;
-			line-height: 22px;
-			position: absolute;
-			margin-top: 5px;
-			margin-left: 30px;
-		}
-
-		input[type="text"] {
-			  width: 395px !important;
-			  height: 55px;
-			  padding-left: 10px;
-			  padding-bottom: 0;
-			  padding-top: 20px;
-			  margin-left: 0 !important;
-			  margin-right: 40px !important;
-			  margin-bottom: 2%;
-			  -webkit-appearance: none;
-			  
-			  background-position: right center;
-			  background-repeat: no-repeat;
-			  line-height: 1em;
-			  /* for FF */
-			  -moz-appearance: none;
-			  text-indent: 0.01px; 
-			  text-overflow: '';
-			  /* for IE */
-			  -ms-appearance: none;
-			  appearance: none!important;
-			   white-space: pre-wrap;
-			  border: 2px solid gainsboro;
-			 }
-			::-webkit-input-placeholder {
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;
-			}
-
-			:-moz-placeholder { /* Firefox 18- */
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;  
-			}
-
-			::-moz-placeholder {  /* Firefox 19+ */
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
-			:-ms-input-placeholder {  
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
-		form {
-			
-			margin-left: 5% !important;
-			margin-right: 5% !important;
-			margin-bottom: 2%;
-		}
-
-		form {
-			label {
-			  	color: #616161;
-				font-family: $font-ubuntu;
-				font-size: 13px;
-				font-weight: 300;
-				line-height: 22px;
-				position: absolute;
-				margin-top: 5px;
-				margin-left: 10px;
-			}
-			select {
-			  width: 395px;
-			  height: 55px;
-			  padding-left: 10px;
-			  padding-bottom: 0;
-			  padding-top: 20px;			  
-
-			  -webkit-appearance: none;
-			  background-image: url('../img/request-arrow.png');
-			  background-position: right center;
-			  background-repeat: no-repeat;
-			  line-height: 1em;
-			  /* for FF */
-			  -moz-appearance: none;
-			  text-indent: 0.01px; 
-			  text-overflow: '';
-			  /* for IE */
-			  -ms-appearance: none;
-			  appearance: none!important;			  
-			  white-space: pre-wrap;
-			  border: 2px solid gainsboro;
-			  color: black;
-			  font-family: $font-ubuntu;
-			  font-size: 15px;
-			  font-weight: 400;
-			  line-height: 22px;
-			}
-			 
-			select::-ms-expand {
-			  display: none;
-			}
-		}
-			.address-store {
-				margin-left: 0 !important;
-			}
-
-			.address-store {
-				p.can-take {
-					color: black;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;
-					line-height: 22px;
-				}
-				p.storage {
-					font-weight: 600;
-				}
-				a {
-					color: #1565c0;
-					font-family: $font-ubuntu;
-					font-size: 18px;
-					font-weight: 400;
-					margin-left: 20px;			
-				}
-				.phone {
-					color: #636363;
-					font-family: $font-ubuntu;
-					font-size: 15px;
-					font-weight: 400;	
-					margin-left: 20px;	
-					margin-bottom: 0;	
-				}
-			}
-	}
-	
-	p {
-		color: #8c8c8c;
-		font-family: $font-ubuntu;
-		font-size: 13px;
-		font-weight: 400;
-		line-height: 22px;
-	}
-	button.button-green {
-			float: right;
-			position: absolute;
-			margin-left: 10%;
-			margin-top: 0;
-			width: 150px !important;
-			height: 45px !important;
-		}
-		
-	.enter {
-		width: 90%;
-		height: 50px;
-		float: left;
-		margin-top: 30px;
-		margin-left: 15%;
-	}
-
-	.enter {
-		div {
-			display: inline-block;
-			margin-right: 10px;
-		}
-
-		p {
-			color: #8c8c8c;
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
-			line-height: 22px;
-		}
-		a {
-			color: #1565c0;
-			font-family: $font-ubuntu;
-			font-size: 15px;
-			font-weight: 400;
-		}
 	}
 }
 
@@ -2302,6 +1893,7 @@ button.navbar-toggle {
 		min-height: 55px;		
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 5px !important;
 	}
 	.modal-recall-header {
 		h4 {
@@ -2317,12 +1909,6 @@ button.navbar-toggle {
 
 	.modal-recall-body {
 		label {
-			color: #616161;
-			font-family: $font-ubuntu;
-			font-size: 13px;
-			font-weight: 300;
-			line-height: 22px;
-			position: absolute;
 			margin-top: 5px;
 			margin-left: 30px;
 		}
@@ -2334,56 +1920,10 @@ button.navbar-toggle {
 			  padding-bottom: 0;
 			  padding-top: 20px;
 			  padding-left: 10px;
-			  -webkit-appearance: none;
-			  
-			  background-position: right center;
-			  background-repeat: no-repeat;
-			  line-height: 1em;
-			  /* for FF */
-			  -moz-appearance: none;
-			  text-indent: 0.01px; 
-			  text-overflow: '';
-			  /* for IE */
-			  -ms-appearance: none;
-			  appearance: none!important;
 			  margin-left: 5% !important;
 			  margin-right: 5% !important;
 			  margin-bottom: 2%;
-			  white-space: pre-wrap;
-			  border: 2px solid gainsboro;
-			 }
-			::-webkit-input-placeholder {
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;
-
-			}
-
-			:-moz-placeholder { /* Firefox 18- */
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px;  
-			}
-
-			::-moz-placeholder {  /* Firefox 19+ */
-			   	color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
-
-			:-ms-input-placeholder {  
-			   color: black;
-				font-family: $font-ubuntu;
-				font-size: 15px;
-				font-weight: 400;
-				line-height: 22px; 
-			}
+		}
 
 		button.button-green {
 			width: 240px;
@@ -2452,10 +1992,15 @@ button.navbar-toggle {
 	li.active {
 		color: black !important;
 	}	
+	li {
+		a:hover {
+			text-decoration: underline !important;
+		}
+	}
 	.breadcrumb {
-	background-color: transparent !important;
-	border: none !important;
-}
+		background-color: transparent !important;
+		border: none !important;
+	}
 }
 
 /* ============================================ Stock ========================================================*/
@@ -2542,14 +2087,10 @@ button.navbar-toggle {
 	}
 	.card-text {
 		color: #626262;
-		font-family: $font-ubuntu;
 		font-size: 13px;
-		font-weight: 400;
-		line-height: 22px;
 	}
 	.card-price {
 		color: black;
-		font-family: $font-ubuntu;
 		font-size: 18px;
 		font-weight: 700;
 	}
@@ -2568,19 +2109,19 @@ button.navbar-toggle {
 		margin-top: -5px;
 	}
 	.label-new {
-		position: absolute;
+		position: relative;
 		float: right;
 		margin-top: -120px;
 		margin-left: 165px;
 	}
 	.label-stock-10 {
-		position: absolute;
+		position: relative;
 		float: right;
 		margin-top: -120px;
 		margin-left: 165px;
 	}
 	.label-stock-50-wrap-left {
-		position: absolute;
+		position: relative;
 		float: right;
 		margin-top: -120px;
 		margin-left: 145px;
@@ -2628,10 +2169,7 @@ button.navbar-toggle {
 	}
 	.card-text {
 		color: #626262;
-		font-family: $font-ubuntu;
 		font-size: 13px;
-		font-weight: 400;
-		line-height: 22px;
 	}
 	.card-price {
 		color: black;
@@ -2815,10 +2353,7 @@ button.navbar-toggle {
 			margin-top: 0 !important;
 		}
 		.category-list-caption {
-			padding-top: 12px !important; 
-			padding-left: 0 !important;
-			padding-right: 0 !important;
-
+			padding: 12px 0 0 !important; 
 		}
 		.category-list-caption {
 			p.catalog-list-caption {
@@ -3599,7 +3134,6 @@ button.navbar-toggle {
 .payments {
 	p {
 		color: #1565c0 !important;
-		font-family: $font-ubuntu !important;
 		font-size: 15px !important;
 		font-weight: 500 !important;
 		line-height: 18px !important;
@@ -3637,7 +3171,6 @@ button.navbar-toggle {
 		font-weight: 600;
 	}
 	p {
-		font-family: $font-ubuntu;
 		font-size: 15px;
 		line-height: 24px;
 		color: #0a0a0a;
@@ -3677,7 +3210,6 @@ button.navbar-toggle {
 		font-weight: 600;
 	}
 	p {
-		font-family: $font-ubuntu;
 		font-size: 15px;
 		line-height: 24px;
 		color: #0a0a0a;
@@ -3773,7 +3305,7 @@ button.navbar-toggle {
 			background-image: url('../img/background-feedback.png');
 			background-position: bottom;
 			background-repeat: no-repeat;
-			min-height: 180px;
+			min-height: 190px;
 			padding-left: 25px;
 		}
 		
@@ -3786,7 +3318,6 @@ button.navbar-toggle {
 			}
 			p {
 				color: black;
-				font-family: $font-ubuntu;
 				font-size: 15px;
 				font-weight: 500;
 			}
@@ -3814,7 +3345,6 @@ button.navbar-toggle {
 			}
 			p {
 				color: black;
-				font-family: $font-ubuntu;
 				font-size: 15px;
 				font-weight: 500;
 				margin-bottom: 5px !important;
@@ -3844,7 +3374,6 @@ button.navbar-toggle {
 
 			p.author {
 				color: black;
-				font-family: $font-ubuntu;
 				font-size: 15px;
 				font-weight: 600;
 				padding-left: 15px;
@@ -3857,7 +3386,6 @@ button.navbar-toggle {
 			p.date {
 				float: right;
 				color: #5c745e;
-				font-family: $font-ubuntu;
 				font-size: 13px;
 				font-weight: 400;
 				margin-top: -23px !important;
@@ -3905,7 +3433,6 @@ button.navbar-toggle {
 	}
 	p {
 		color: #101010;
-		font-family: $font-ubuntu;
 		font-size: 15px;
 		line-height: 22px;
 		font-weight: 400;
@@ -3930,7 +3457,6 @@ button.navbar-toggle {
 	}
 	p {
 		color: #101010;
-		font-family: $font-ubuntu;
 		font-size: 15px;
 		line-height: 22px;
 		font-weight: 400;
@@ -3940,7 +3466,7 @@ button.navbar-toggle {
 	}
 }
 
-/* ============================================ Card good ========================================================*/
+/* ============================================ Card goods ========================================================*/
 .card-good {
 	width: 1170px !important;
 }
@@ -4130,7 +3656,6 @@ button.navbar-toggle {
 	.card-body {
 		.tabs-wrap {
 			width: 860px;
-			margin-bottom: 40px;
 		}
 		.tabs-wrap {
 			ul.card-tabs {
@@ -4233,7 +3758,6 @@ button.navbar-toggle {
 			}
 			p {
 				color: white;
-				font-family: $font-ubuntu;
 				font-size: 13px;
 				font-weight: 400;
 				line-height: 18px;
@@ -4246,7 +3770,6 @@ button.navbar-toggle {
 		}
 		p.give-number {
 			color: black;
-			font-family: $font-ubuntu;
 			font-size: 13px;
 			font-weight: 600;
 			line-height: 18px;
@@ -4689,7 +4212,6 @@ button.navbar-toggle {
 		}
 	}
 	p.fill-form {
-		font-family: $font-ubuntu;
 		font-size: 18px;
 		color: black;
 		font-weight: 400;	
@@ -4717,17 +4239,6 @@ button.navbar-toggle {
 			height: 45px;
 		}
 
-		label {
-				color: #616161;
-				font-family: $font-ubuntu;
-				font-size: 13px !important;
-				font-weight: 300;
-				line-height: 22px;
-				position: absolute;
-				margin-top: 3px;
-				margin-left: 10px;
-		}	
-
 		button {
 			width: 150px;
 			height: 45px;
@@ -4754,16 +4265,6 @@ button.navbar-toggle {
 			height: 45px;
 		}
 
-		label {
-				color: #616161;
-				font-family: $font-ubuntu;
-				font-size: 13px !important;
-				font-weight: 300;
-				line-height: 22px;
-				position: absolute;
-				margin-top: 3px;
-				margin-left: 10px;
-			}
 		button {
 			width: 315px;
 			height: 40px;
@@ -4965,7 +4466,6 @@ button.navbar-toggle {
 			margin-top: 10px !important;
 		}
 		p {
-			font-family: $font-ubuntu;
 			font-size: 13px;
 			font-weight: 400;
 			color: #8b8b8b;
@@ -5987,7 +5487,7 @@ button.navbar-toggle {
 						}
 						td:nth-child(4) {
 							text-align: left;
-							adding-left: 25px;
+							padding-left: 25px;
 						}
 					}
 				}
